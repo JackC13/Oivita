@@ -21,7 +21,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- SVG animation lottie JS -->
-    <script src="assets/js/lottie.js"></script>
+<!--     <script src="assets/js/lottie.js"></script> -->
     <!-- Oivita Main CSS Style -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/vendors/scrolloverflow.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css?v=201807181729">
@@ -445,9 +445,9 @@
     <!-- [End] 標題列 -->
 
     <!-- [Start] 開場動畫 -->
-    <section class="loading-block">
+<!--     <section class="loading-block">
         <div id="loading_lottie"></div>
-    </section>
+    </section> -->
     <!-- [End] 開場動畫 -->
 
     <div id="fullpage">
@@ -1043,13 +1043,13 @@
 
         $(function () {
 
-            lottie.loadAnimation({
-                container: document.getElementById('loading_lottie'), // the dom element that will contain the animation
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: './assets/svg_json/oivita_loading.json' // the path to the animation json
-            });
+//             lottie.loadAnimation({
+//                 container: document.getElementById('loading_lottie'), // the dom element that will contain the animation
+//                 renderer: 'svg',
+//                 loop: true,
+//                 autoplay: true,
+//                 path: './assets/svg_json/oivita_loading.json' // the path to the animation json
+//             });
 
             setTimeout(function () {
                 $(".loading-block").css("opacity", "0");
