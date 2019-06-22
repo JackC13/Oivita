@@ -1,0 +1,29 @@
+
+
+.btn{
+
+
+	&.btn-radius{
+		border-radius: 60px;
+	}
+
+	&.btn-black-radius {
+		border: none;
+	    background: #021F31;
+	    color: #FFF;
+	    letter-spacing: 1px;
+	    padding: 15px 40px;
+	    margin-bottom: 5px;
+	}
+
+	&.btn-black-radius-outlinen {
+	    border: solid 2px #021F31;
+	    background: #FFF;
+	    color: #021F31;
+	    letter-spacing: 1px;
+	    padding: 15px 40px;
+	    margin-bottom: 5px;
+	}
+}
+
+

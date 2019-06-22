@@ -1,0 +1,675 @@
+@charset "UTF-8";
+
+
+/*!
+* Oivita v1.0.0
+* Copyright 2018 Oivita Creative Co.,. Ltd.All rights reserved
+*/
+
+$base_size: 16px;
+$font_family:'Quicksand',
+sans-serif;
+
+$color_gray:#576976;
+$color_dark:#021F31;
+$color_dark_hover:#314957;
+$color_blue:#01BEDB;
+$color_hl_orange:#F6C44F;
+
+
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: top;
+    font-family: $font_family; // border: solid 1px #5e5e5e;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 0;
+}
+
+h1 {
+    font-size: $base_size * 3.5;
+}
+
+h2 {
+    font-size: $base_size * 3;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: $base_size * 2.5;
+}
+
+h4 {
+    font-size: $base_size * 2;
+}
+
+h5 {
+    font-size: $base_size * 1.5;
+}
+
+h6 {
+    font-size: $base_size;
+}
+
+
+p {
+    color: $color_gray;
+    font-size: $base_size;
+    line-height: $base_size * 1.5;
+    margin-top: 30px;
+    word-break: break-word;
+    width: 80%;
+
+    &.sm-font {
+        margin-top: 0px;
+        font-size: $base_size * 0.8;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color_dark;
+
+    &:hover {
+        color: $color_dark_hover;
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fa {
+    font-size: $base_size *1.5;
+}
+
+.margin-null {
+    margin: 0;
+}
+
+
+/* 手機板、電腦版顯示 */
+
+
+.mobile-show{
+    display: none;
+}
+
+.desktop-show{
+    display: block;
+}
+
+
+
+@media all and (max-width: 576px) {
+    .hidden-xs-down {
+        display: none;
+    }
+
+    .mobile-show{
+        display: block;
+    }
+
+    .desktop-show{
+        display: none;
+    }
+}
+
+
+
+
+
+/* [Start] 標題列 */
+
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 2;
+    height: 70px;
+
+    .left {
+        text-align: left;
+    }
+    .mid {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-end;
+
+        .operton-block {
+            margin-left: 50px;
+        }
+    }
+}
+
+
+/* [End] 標題列 */
+
+
+/* [Start] footer */
+
+.orign-footer {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 15px;
+    margin-right: 130px;
+    // width: 100%;
+
+    .lng-change {
+        color: $color_dark;
+        font-weight: bold;
+    }
+    .menu {
+        li {
+            font-weight: bold;
+            margin-left: 20px;
+
+            a {
+                color: $color_gray;
+            }
+
+            &.active {
+                a {
+                    color: $color_blue;
+                }
+            }
+
+            &:nth-child(1) {
+                margin-left: 70px;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+	.orign-footer{
+		display: none;
+	}
+
+}
+
+
+
+/* 基本section區塊樣式 */
+
+.content-block {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 70px;
+    margin-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        &.flex-center {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.flex-top-left {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: baseline;
+        }
+    }
+}
+
+
+
+
+
+/* 產品首頁 */
+
+// .oring-plus-home,
+// .oring-plus-sensor,
+// .oring-plus-sensor-blood,
+// .oring-plus-app-realtimedata {
+// }
+.oring-plus-spec {
+    .spec-info-block {
+        height: 250px;
+    }
+}
+
+.opacity-0{
+    opacity: 0;
+}
+// Heart Rate 影片
+#hr_number{
+    position: absolute;
+    // padding-bottom: 150px;
+    #content-left-hr{
+        right:140px;
+        transition: opacity 0.5s;
+    }
+    #content-right{
+        left:140px;
+        transition: opacity 0.5s;
+    }
+}
+#hr_fingerPrint{
+    top:60px;
+    left:0;   
+    transition: opacity 1s;
+}
+#hr_bar{
+    height: 70px;
+}
+
+// spo2
+#spo2_number{
+    position: absolute;
+    #content-right-spo2{
+        right:140px;
+        transition: opacity 0.5s;
+    }
+    #content-left-percent{
+        left:140px;
+        transition: opacity 0.5s;
+    }
+}
+#spo2_fingerPrint{
+    top:50px;
+    left:0;   
+    transition: opacity 1s;
+}
+#hr_bar{
+    height: 70px;
+}
+//motion
+#motion_panel{
+    top:-80px;
+}
+#motion_number{
+    position: absolute;
+    //left:100px;
+}
+/* [Start] 產品區塊樣式 */
+
+.product-block {
+
+    margin-right: 10px;
+    margin-left: 10px;
+
+
+    h3 {
+        font-weight: 0;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    h4 {
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    p {
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 5px;
+    }
+
+    .img-block {
+        @include center();
+        width: 100%;
+        height: 20%;
+        box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+
+
+/* [End] 產品區塊樣式 */
+
+
+/* [Start]Menu 樣式 */
+
+.menu-block {
+    opacity: 0;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+
+    padding-top: 30px;
+    transition: all 0.3s;
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .header {
+        height: 70px;
+
+        .menu-close {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 45px;
+            display: inline-block;
+            cursor: pointer;
+            z-index: 10;
+
+            label {
+                width: 200px;
+                display: inline-block;
+                position: absolute;
+                left: 55px;
+                top: 15px;
+                color: $color_gray;
+                letter-spacing: 5px;
+                font-weight: 800;
+            }
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 800;
+            color: $color_dark;
+        }
+    }
+
+    .menu-content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        vertical-align: top
+    }
+
+
+    .block-main {
+        width: 50%;
+        height: 50%;
+    }
+
+    .block-sub {
+        width: 50%;
+        height: 25%;
+    }
+
+
+    .menu-link-list {
+        font-size: $base_size * 3;
+        font-weight: bold;
+    }
+
+    .footer-link-list {
+        li {
+            font-weight: bold;
+            margin-bottom: 10px;
+            a {
+                color: $color_gray;
+            }
+        }
+    }
+
+    .content-logo {
+        margin-top: 25%;
+        transform: translatey(-50%);
+        h2 {
+            letter-spacing: 5px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .copy-right {
+        width: 100%;
+        color: $color_gray;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-size: $base_size * 0.5;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .menu-block {
+        .menu-content {
+            .block-main {
+                width: 100%;
+                height: 25%;
+            }
+            .block-sub {
+                width: 100%;
+                height: 25%;
+            }
+
+            .logo-block {
+                height: 50px;
+            }
+
+
+            .menu-link-list {
+                font-size: $base_size * 1.5;
+            }
+
+            .copy-right {
+                font-size: 0.5em;
+            }
+        }
+    }
+}
+
+
+
+/* [End ]Menu 樣式 */
+
+.product-home-page {
+    .header {
+        height: 70px;
+
+        .menu-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 45px;
+            display: inline-block;
+            cursor: pointer;
+            z-index: 10;
+
+            label {
+                width: 120px;
+                display: inline-block;
+                position: absolute;
+                right: 55px;
+                top: 15px;
+                color: $color_gray;
+                letter-spacing: 5px;
+                font-weight: 800;
+            }
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 800;
+            color: $color_dark;
+        }
+    }
+}
+
+
+
+
+
+
+
+/* 橫條導覽列 */
+
+.section-list {
+    width: 30px;
+
+    li {
+        border: solid 2px $color_gray;
+        border-radius: 5px;
+        height: 2px;
+        background: $color_gray;
+        width: 100%;
+        margin-top: 20px;
+
+        &.active {
+            border: solid 2px $color_dark;
+            border-radius: 5px;
+            background: $color_dark;
+        }
+    }
+}
+
+
+
+
+/* [Start] 色塊選擇 */
+
+.clolr-block {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    display: inline-block;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+
+    &.active {
+        border: solid 2px #01BEDB;
+
+        &:hover {
+            border: solid 2px #01BEDB;
+        }
+    }
+
+    &:hover {
+        border: solid 2px #b2ebf4;
+    }
+
+    .color {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+
+        &.color-black {
+            background-color: #3e3e3e;
+        }
+
+        &.color-gray {
+            background-color: #FAFBFB;
+        }
+
+        &.color-white {
+            background-color: #FAFBFB;
+        }
+
+        &.color-green {
+            background-color: #ACFDFB;
+        }
+
+        &.color-red {
+            background-color: #FF4F53;
+        }
+    }
+}
+
+
+
+
+/* [End] 色塊選擇 */
+
+
+/* Icon  */
+
+.close-icon {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-22-128.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* Heigh Line */
+
+.hl {
+
+    font-size: $base_size *5;
+    font-weight: bold;
+
+    &.hl-orange {
+        color: $color_hl_orange;
+    }
+}
+
+@media all and (min-width: 1890px){
+    .container {
+        max-width: 1740px;
+    }
+}
+@import '_font-color';
+@import '_icons';
+@import '_controller';
+@import '_effect';

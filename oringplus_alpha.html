@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Oivita</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Icon -->
+    <script src="https://use.fontawesome.com/aa9bb22fea.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- SVG animation lottie JS -->
+    <script src="assets/js/lottie.js"></script>
+    <!-- Oivita Main CSS Style -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/vendors/scrolloverflow.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css?v=201807181729">
+    <script src="./assets/js/scroll_move.js"></script>
+    <link rel="stylesheet" type="text/css" href="fullpage/jquery.fullpage.css" />
+    <script type="text/javascript" src="fullpage/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="fullpage/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+
+    <style type="text/css" media="screen">
+        /* *{
+            border: solid 1px blue;
+        } */
+
+
+        .panel {
+            position: absolute;
+            bottom: 0;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: 0px -3px 30px 2px rgba(36, 36, 36, 0.3);
+            -webkit-box-shadow: 0px -3px 30px 2px rgba(36, 36, 36, 0.3);
+            -moz-box-shadow: 0px -3px 30px 2px rgba(36, 36, 36, 0.3);
+            -o-box-shadow: 0px -3px 30px 2px rgba(36, 36, 36, 0.3);
+        }
+
+
+
+        .videio-block {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .count-part,
+        .video-fulid {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-position: center center;
+            object-fit: cover;
+            /*cover video background*/
+            transform: translateX(-50%);
+        }
+
+        section[data-anchor='section_2'] .video-fulid,
+        section[data-anchor='section_3'] .video-fulid{
+            max-width: 900px;
+        }
+        /* section[data-anchor='section_2'] .video-fulid,
+        section[data-anchor='section_3'] .video-fulid,
+        section[data-anchor='section_4'] .video-fulid{
+            object-fit: cover;
+        } */
+
+        .video-content {
+            position: absolute;
+            left: 12%;
+            top: 50%;
+            width: 50%;
+            transform: translateY(-50%);
+        }
+
+        .fingerprint-click {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-fingerprint {
+            cursor: pointer;
+        }
+
+        .button {
+            cursor: pointer;
+            border: none;
+            border-radius: 60px;
+            background: #021F31;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 2px;
+            transition: all 0.5s ease;
+            outline: none;
+            margin-bottom: 5px;
+            width: 180px;
+            height: 45px;
+        }
+
+        .butto-outlinen {
+            cursor: pointer;
+            border-radius: 60px;
+            background: #FFF;
+            color: #021F31;
+            border: solid 2px #021F31;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: all 0.5s ease;
+            outline: none;
+            padding: 15px 40px;
+            margin-bottom: 5px;
+        }
+
+        .line-top-title {
+            position: relative;
+            color: #021F31;
+            margin-bottom: 0;
+        }
+
+        .line-top-title:before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 0;
+            border-top: solid 2px #021F31;
+            border-radius: 25px;
+            width: 70px;
+        }
+
+        .line-sub-title {
+            margin-top: 0;
+        }
+
+
+        .paragraph {
+            font-size: 16px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+
+        .mobile-video-img {
+            display: none;
+        }
+
+
+        .iScrollIndicator {
+            display: none !important;
+        }
+
+
+        .center-p {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+        }
+
+
+        #oring_plus_mobile {
+            display: none;
+        }
+
+
+        .oring_plus_mobile_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            filter: blur(10px);
+            background: url('./assets/imgs/ORing Plus Main_320xx.png');
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+        }
+
+        .oring_plus_mobile_content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: rgba(2, 31, 49, 0.2);
+        }
+
+
+        .oring_plus_mobile_content label {
+            color: #fff;
+            width: 100%;
+            padding: 0 25px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+        }
+
+        .oring-main-content-title {
+            font-size: 54px;
+            font-weight: bold;
+        }
+
+
+        .motion-sensor-count-part {
+            background: -webkit-linear-gradient(left, #16a4ff 0%, #895fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .oring_plus_product_img {
+            width: 363px;
+            height: 522px;
+        }
+
+
+        .count-dom {
+            position: absolute;
+            z-index: 5;
+
+            font-weight: bold;
+            transition: all 0.5s ease-in-out;
+        }
+
+
+        .font-color-68DDA5 {
+            color: #68DDA5;
+        }
+
+        .font-color-EF6359 {
+            color: #EF6359;
+        }
+
+        .font-color-425765 {
+            color: #425765;
+        }
+
+        #content-left-hr,
+        #content-right-hr-number,
+        #content-left-percent,
+        #content-right-spo2 {
+            font-size: 60px;
+        }
+
+        #content-right-thrust
+        {
+            top:-15px;
+            width:auto;
+            white-space:nowrap;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        #content-left-m-hr-number {
+            font-size: 144px;
+            font-weight: bold;
+        }
+
+        @media all and (min-width: 1366px) {
+            .text-container{
+                max-width:1200px;
+            }
+        }
+
+        @media all and (max-width: 1240px) {
+            #content-left-hr,
+            #content-right-hr-number,
+            #content-left-percent,
+            #content-right-spo2 {
+                font-size: 48px;
+            }
+
+            .oring-main-content-title {
+                font-size: 48px;
+            }
+        }
+
+        @media all and (max-width: 768px) {
+            #content-left-hr,
+            #content-right-hr-number,
+            #content-left-percent,
+            #content-right-spo2 {
+                font-size: 36px;
+            }
+
+            #content-left-m-hr-number {
+                font-size: 84px;
+            }
+
+            #content-right-thrust {
+                font-size: 24px;
+            }
+        }
+
+        @media all and (max-width: 576px) {
+
+            #loading_lottie svg {
+                width: 100% !important;
+                height: auto !important;
+                top: 1.5%;
+            }
+
+            #content-left-hr,
+            #content-right-hr-number,
+            #content-left-percent,
+            #content-right-spo2 {
+                font-size: 36px;
+            }
+
+            #content-left-m-hr-number {
+                font-size: 48px;
+            }
+
+            #content-right-thrust {
+                font-size: 14px;
+            }
+
+
+            .oring-main-content-title {
+                font-size: 28px;
+            }
+
+            .video-content {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                padding: 10px;
+            }
+
+            .oring-content-img {
+                top: 150px;
+                height: auto !important;
+            }
+
+            .oring-content-title {
+                top: 110px;
+                transform: translateY(-20%);
+                text-align: center;
+            }
+
+            .mobile-video-img {
+                display: block;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-bottom: 20%;
+            }
+
+            .mobile-video-img img {
+                width: 100%;
+            }
+
+            #oring_plus_mobile {
+                display: inline-block;
+            }
+
+            .paragraph {
+                font-size: 16px;
+            }
+
+            .oring_plus_product_img {
+                width: 100%;
+                height: 100%;
+                left: 5px;
+            }
+
+
+            .oring-content-title h1 {
+                font-size: 36px;
+            }
+        }
+
+        .loading-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #EAEAEB;
+            transition: all 1s ease-in-out;
+            z-index: 999;
+        }
+
+        #loading_lottie {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center">
+    <!-- [Start] 標題列 -->
+    <header style="background-color: transparent;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-4 left ">
+                    <a href="#" class="menu-show d-none d-sm-block"><i class="icon icon-menu icon-sz-1 " aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-4 col-xs-4 col-sm-4 col-4 mid">
+                    <a class="margin-null" href="#section_0"><i class="icon icon-logo icon-sz-1"></i></a>
+                </div>
+                <div class="col-md-4 col-xs-4 col-sm-4 col-4 right">
+                    <div class="operton-block">
+                        <a href="#"><i class="icon icon-pmenu icon-sz-1 " aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- [End] 標題列 -->
+
+    <!-- [Start] 開場動畫 -->
+    <section class="loading-block">
+        <div id="loading_lottie"></div>
+    </section>
+    <!-- [End] 開場動畫 -->
+
+    <div id="fullpage">
+
+        <!-- [Start] ÖRing Plus 介紹區塊 -->
+        <section class="section videio-block fp-noscroll" data-anchor="section_0" style="background-color:#FBFBFB">
+
+            <video id="Main_HERO" class="video-fulid p-0 d-none d-sm-block" data-autoplay muted preload playsinline>
+                <source src="assets/vedio/Main_HERO.mp4" type="video/mp4">
+            </video>
+
+            <div class="mobile-video-img oring-content-img">
+                <img src="assets/imgs/ORing Plus Main_320xx.png" alt="">
+            </div>
+
+            <div class="video-content oring-content-title">
+                <h1 class="oring-main-content-title">ÖRing Plus</h1>
+                <h1 class="oring-main-content-title font-weight-normal">Put a ring on it.</h1>
+                <p class="d-none d-sm-block">ÖRing Plus is a new, fun way to track your sexual health with custom
+                    vibrations, heart rate measurement, and blood oxygen tracking.</p>
+            </div>
+
+        </section>
+        <!-- [End] ÖRing Plus 介紹區塊 -->
+
+
+
+        <!-- [Start] ÖRing Plus Mobile-->
+        <section class="section videio-block fp-noscroll" data-anchor="section_1" id="oring_plus_mobile">
+            <div class="oring_plus_mobile_img"></div>
+            <div class="oring_plus_mobile_content">
+                <label style="color:#fff;">ÖRing Plus is a new, fun way to track your sexual health with custom
+                    vibrations, heart rate measurement, and blood oxygen tracking.</label>
+            </div>
+        </section>
+        <!-- [End] ÖRing Plus Mobile-->
+
+
+
+        <!-- [Start] Heart Rate Sensor 介紹區塊 -->
+        <section class="section videio-block fp-noscroll" data-anchor="section_2">
+            <video id="hr_video" class="video-fulid" poster="assets/imgs/Heart Rate Sensor Placeholder HERO.png" data-autoplay muted
+                preload playsinline onended="hr_videoEnded()">
+                <source src="assets/vedio/Heart Rate Sensor P1 HERO_1920x1080.mp4" type="video/mp4">
+            </video>
+
+            <video id="hr_video2" class="video-fulid invisible" muted preload playsinline onplaying="hr_video2Playing()">
+                <source src="assets/vedio/Heart Rate Sensor P2 HERO_1920x1080.mp4" type="video/mp4">
+            </video>
+
+            <div id="hr_panel" class="d-flex justify-content-center align-items-center video-fulid">
+                <div id="hr_fingerPrint" class="d-flex flex-column align-items-center opacity-0">
+                    <i class="icon icon-fingerprint" data-video="hr_video" style="width:120px; height:120px;"></i>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div id="hr_bar" class="line line-blue"></div>
+                        <p id="hr_word" class="ft-crl-bl mt-1" style="width:auto;font-size: 16px; font-weight: bold; white-space:nowrap;">Touch
+                            or click to measure heart rate</p>
+                    </div>
+                </div>
+                <div id="hr_number" class="d-flex justify-content-center align-items-center">
+                    <div id="content-left-hr" class="count-dom font-color-68DDA5">HR</div>
+                    <div id="content-right" class="count-dom">
+                        <div id="content-right-hr-number" class="font-color-68DDA5">121</div>
+                        <div id="content-right-bmp" class="font-color-68DDA5 text-center" style="font-size:18px;">BMP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Heart Rate Sensor</h5>
+                            <h5>Take it to the next level.</h5>
+                            <p class="paragraph mobile-show">
+                                ÖRing Plus measures your heart rate through intercourse and lets you focus on enjoying
+                                yourself. It syncs to Apple Health app as reference, your ultimate pleasure now has
+                                more insight to it.
+                            </p>
+                            <button class="button mt-0" onclick="test()">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12 d-none d-sm-block">
+                            <!-- <h5 class="font-weight-bold m-0">&nbsp;</h5> -->
+                            <p class="paragraph desktop-show m-0">
+                                ÖRing Plus measures your heart rate through intercourse and lets you focus on enjoying
+                                yourself. It syncs to Apple Health app as reference, your ultimate pleasure now has
+                                more insight to it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- [End] Heart Rate Sensor 介紹區塊 -->
+
+
+
+        <!-- [Start] SpO2 Sensor 介紹區塊 -->
+        <section class="section videio-block fp-noscroll" data-anchor="section_3">
+
+            <video id="spo2_video" class="video-fulid" poster="assets/imgs/Blood Oxygen Placeholder HERO.png"
+                data-autoplay muted preload playsinline onended="spo2_videoEnded()">
+                <source src="assets/vedio/Heart Rate Sensor P1 HERO_1920x1080.mp4" type="video/mp4">
+            </video>
+
+            <video id="spo2_video2" class="video-fulid invisible" muted preload playsinline onplaying="spo2_video2Playing()">
+                <source src="assets/vedio/Blood Oxygen HERO_1920x1080.mp4" type="video/mp4">
+            </video>
+
+            <div id="spo2_panel" class="d-flex justify-content-center align-items-center video-fulid">
+                <div id="spo2_fingerPrint" class="d-flex flex-column justify-content-center align-items-center opacity-0">
+                    <i class="icon icon-fingerprint" data-video="spo2_video" style="width:120px; height:120px;"></i>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div id="spo2_bar" class="line line-blue"></div>
+                        <p id="spo2_word" class="ft-crl-bl mt-1" style="width:auto;font-size: 16px; font-weight: bold; white-space:nowrap;">Touch
+                            or click to measure SpO2</p>
+                    </div>
+                </div>
+                <div id="spo2_number" class="d-flex justify-content-center align-items-center">
+                    <div id="content-right-spo2" class="count-dom font-color-EF6359">SpO2</div>
+                    <div id="content-left-percent" class="count-dom font-color-EF6359">98%</div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">SpO2 Sensor</h5>
+                            <h5>Take it to the next level.</h5>
+                            <p class="paragraph mobile-show">
+                                Blood oxygen saturation rate (SpO2) is a primary indicator for how well your body is
+                                functioning. ÖRing Plus provides you with real-time stats that help you know your peak
+                                fitness levels.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                Blood oxygen saturation rate (SpO2) is a primary indicator for how well your body is
+                                functioning. ÖRing Plus provides you with real-time stats that help you know your peak
+                                fitness levels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- [End] SpO2 Sensor 介紹區塊 -->
+
+
+
+        <!-- [Start] Motion Sensor 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_4">
+
+            <video id="motion-sensor-video" class="video-fulid" poster="assets/imgs/vedio_png/Motion_HERO.png"
+                data-autoplay muted preload playsinline>
+                <source src="assets/vedio/Motion_HERO.mp4" type="video/mp4">
+                <source src="assets/vedio/Square/Motion_HERO_Square.mp4" type="video/mp4" media="all and (max-width:768px)">
+            </video>
+
+            <div id="motion_panel" class="d-flex justify-content-center align-items-center">
+                <div id="motion_number" class="d-flex flex-column justify-content-center align-items-center">
+                    <div id="content-left-m-hr-number" class="motion-sensor-count-part">312</div>
+                    <div id="content-right-thrust" class="font-color-425765">Thrust
+                        Count</div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Motion Sensor</h5>
+                            <h5>Every moment counts.</h5>
+                            <p class="paragraph  mobile-show">
+                                ÖRing Plus knows how well you’ve done, and how fast you move. The built-in motion
+                                sensor tells you your thrust speed and count, as well as how much impact you made on
+                                each thrust.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                ÖRing Plus knows how well you’ve done, and how fast you move. The built-in motion
+                                sensor tells you your thrust speed and count, as well as how much impact you made on
+                                each thrust.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- [End] Motion Sensor 介紹區塊 -->
+
+
+
+        <!-- [Start] Real-Time Data Display 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_5" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Real_Time_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Real_Time_HERO.mp4" type="video/mp4">
+                <source src="assets/vedio/Square/Real_Time_HERO_Square.mp4" type="video/mp4" media="all and (max-width:768px)">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=349" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Real-Time Data Display</h5>
+                            <h5>Keep up with your performance.</h5>
+                            <p class="paragraph mobile-show">
+                                Check your progress and data as it's precision-recorded by the multiple sensors built
+                                right into your ORing+.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                Check your progress and data as it's precision-recorded by the multiple sensors built
+                                right into your ORing+.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Real-Time Data Display 介紹區塊 -->
+
+        <!-- [Start] Advanced Stamina Algorithm 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_6" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Stamina_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Stamina_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=223" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Advanced Stamina Algorithm</h5>
+                            <h5>Take it a little further.</h5>
+                            <p class="paragraph mobile-show">
+                                Our algorithm for your rhythm. Track your stamina and overall health.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                Our algorithm for your rhythm. Track your stamina and overall health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Advanced Stamina Algorithm 介紹區塊 -->
+
+
+
+        <!-- [Start] Vibration Pattern Customization 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_7" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Pattern_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Pattern_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=449" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Vibration Pattern Customization</h5>
+                            <h5>You’re unique. Make your pattern just as unique.</h5>
+                            <p class="paragraph mobile-show">
+                                Enhance every orgasm with ÖRing Plus’ custom settings. Create your own vibration
+                                patterns to match the mood of the evening.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                Enhance every orgasm with ÖRing Plus’ custom settings. Create your own vibration
+                                patterns to match the mood of the evening.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Vibration Pattern Customization 介紹區塊 -->
+
+
+
+        <!-- [Start] Session History 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_8" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Session_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Session_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=449" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Session History</h5>
+                            <h5>The loop that keeps you in the loop.</h5>
+                            <p class="paragraph mobile-show">
+                                The Öivita app provides the full stats including heart rate, blood oxygen saturation,
+                                calories burned, speed, thrust count, duration, and more. Meet your goals the fun way.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                The Öivita app provides the full stats including heart rate, blood oxygen saturation,
+                                calories burned, speed, thrust count, duration, and more. Meet your goals the fun way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Session History 介紹區塊 -->
+
+
+
+        <!-- [Start] Ranking 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_9" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Ranking_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Ranking_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=428" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Ranking</h5>
+                            <h5>See how you stack up.</h5>
+                            <p class="paragraph mobile-show">
+                                Want to have some fun? Compare your results to not only yourself, but others. As
+                                anonymously as you want to.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                Want to have some fun? Compare your results to not only yourself, but others. As
+                                anonymously as you want to.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Ranking 介紹區塊 -->
+
+
+
+        <!-- [Start] Qi Wireless Charging 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_10" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Wireless_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Wireless_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=1029" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Qi Wireless Charging</h5>
+                            <h5>Effortlessly charged.</h5>
+                            <p class="paragraph mobile-show">
+                                ÖRing Plus charges in one hour and lasts for up to 85 minutes on the highest setting.
+                                Simply place your device on the Qi Wireless Charging case, and it will be ready
+                                whenever the mood hits.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                ÖRing Plus charges in one hour and lasts for up to 85 minutes on the highest setting.
+                                Simply place your device on the Qi Wireless Charging case, and it will be ready
+                                whenever the mood hits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Qi Wireless Charging 介紹區塊 -->
+
+
+
+        <!-- [Start] Design 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_11" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Design_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Design_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=521" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Design</h5>
+                            <h5>Crafted for performance.</h5>
+                            <p class="paragraph mobile-show">
+                                We made ÖRing Plus to be enjoyable right when you take it out of the box. Sex-positive
+                                couples, singles, and combos of any type should feel as comfortable with their ÖRing
+                                Plus as they are with their partners, new and old, so we’ve made it as safe and
+                                approachable as it is fun.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                We made ÖRing Plus to be enjoyable right when you take it out of the box. Sex-positive
+                                couples, singles, and combos of any type should feel as comfortable with their ÖRing
+                                Plus as they are with their partners, new and old, so we’ve made it as safe and
+                                approachable as it is fun.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Design 介紹區塊 -->
+
+
+
+        <!-- [Start] Packaging 介紹區塊 -->
+        <section class="section videio-block" data-anchor="section_12" only-video="true">
+            <video class="video-fulid" poster="assets/imgs/vedio_png/Packaging_HERO.png" data-autoplay muted preload
+                playsinline>
+                <source src="assets/vedio/Packaging_HERO.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="mobile-video-img">
+                <img src="https://picsum.photos/600/1050/?image=1024" alt="">
+            </div> -->
+            <div class="panel">
+                <div class="container text-container">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <div class="offset-md-1 col-md-5 col-12">
+                            <h5 class="font-weight-bold m-0">Packaging</h5>
+                            <h5>Keep it under wraps.</h5>
+                            <p class="paragraph mobile-show">
+                                We won’t embarrass you at the front door, either. All of our packaging is unassuming
+                                enough to be sent to mom’s house without any awkward conversations.
+                            </p>
+                            <button class="button mt-0">ORDER NOW</button>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <p class="paragraph desktop-show m-0">
+                                We won’t embarrass you at the front door, either. All of our packaging is unassuming
+                                enough to be sent to mom’s house without any awkward conversations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [End] Packaging 介紹區塊 -->
+
+
+        <!-- [Start] Oring Plus Detail -->
+        <section class="section" data-anchor="section_13" style="background-color: #FAFBFB;padding-top:46.4px">
+            <div class="container ">
+                <div class="row pt-3 pb-3">
+                    <div class="col-md-6 d-flex justify-content-center align-content-center" style="padding-top:68.4px">
+                        <img src="assets/svg/product.svg" alt="" class="oring_plus_product_img">
+                    </div>
+                    <div class="col-md-6">
+                        <h5 style="font-weight:bold;">Specs</h5>
+                        <h2 style="font-weight:100;">ÖRing Plus</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box mb-5">
+                                    <p class="line-top-title font-weight-bold">Diameter</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">1.2 in / 29.55
+                                        mm</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Height</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">2.6in / 65mm</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Depth</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">1in / 26mm</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Chargig Time</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">1 Hour</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Duration</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">1-4hours;15
+                                        hours PPG Sensor Use Only</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Battery</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">Li-lo,170
+                                        mAh,3.7V Standby 180 days</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-box mb-5">
+                                    <p class="line-top-title font-weight-bold">Weight</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">1.41 OZ / 40g</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Width</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">1.8 in / 46.55
+                                        mm</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Charging</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">Qi Wireless
+                                        Charge</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Max dB</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">50 dB</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">Sensor</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">PPG
+                                        Sensor,Motion Sensor,Dual MCU Intergrated</p>
+                                </div>
+                                <div class="detail-box  mb-5">
+                                    <p class="line-top-title font-weight-bold">App</p>
+                                    <p class="line-sub-title font-weight-normal" style="color: #5e5e5e">IOS 10.3.2
+                                        later
+                                        <br>Android 7.0 later</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- [End] Oring Plus Detail -->
+
+
+    <!-- [Start] Footer -->
+    <footer class="orign-footer homepage-footer" style="background-color: transparent">
+        <div class="d-flex flex-column align-items-end justify-content-end">
+            <a href="mailto:info@oivita.com"><i class="icon icon-mail icon-sz-1 mb-4" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/OivitaCreative/" target="_blank"><i class="icon icon-fb-logo icon-sz-1 mb-4"
+                    aria-hidden="true"></i></a>
+            <a href="https://twitter.com/oivitacreate" target="_blank"><i class="icon icon-twitter-logo  icon-sz-1 mb-4"
+                    aria-hidden="true"></i></a>
+        </div>
+    </footer>
+    <!-- [End] Footer -->
+
+
+
+    <script type="text/javascript" src="assets/js/jquery.countTo.js"></script>
+
+
+    <script type="text/javascript">
+
+        function test(){
+            console.log("123");
+        }
+
+        $(document).ready(function () {
+            Countdown_Resize();
+        });
+
+        $(window).resize(function(){
+
+        })
+
+        $(function () {
+
+            lottie.loadAnimation({
+                container: document.getElementById('loading_lottie'), // the dom element that will contain the animation
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: './assets/svg_json/oivita_loading.json' // the path to the animation json
+            });
+
+            setTimeout(function () {
+                $(".loading-block").css("opacity", "0");
+                setTimeout(function () {
+                    $(".loading-block").css("z-index", "-99");
+                }, 1000);
+
+                // setTimeout(function(){
+                //     StartAnimation();
+                // }, 1000);
+
+
+                $("#Main_HERO").get(0).currentTime = 0;
+                $("#Main_HERO").get(0).play();
+
+                if ($('.wow').hasClass('animated')) {
+                    $(this).removeClass('animated');
+                    $(this).removeAttr('style');
+                    new WOW().init();
+                }
+
+            }, 5500);
+        });
+
+        window.requestAnimFrame = function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    callback()
+                }
+        }();
+
+        $('#fullpage').fullpage({
+            anchors:["section_0","section_1","section_2","section_3","section_4","section_5","section_6","section_7","section_8","section_9","section_10","section_11","section_12","section_13"],
+
+            scrollBar: false,
+            scrollOverflow: true,
+            scrollOverflowReset: false,
+            onLeave: function (index, nextIndex, direction) {
+                requestAnimFrame(function () {
+                    var window_width = $(window).width();
+                    // console.log("index:"+index+",direction:"+direction+",nextIndex:"+nextIndex);
+                    // if($("#oring_plus_mobile").css('display') == 'none'){
+                    if(window_width >= 576){
+                        if (index == 1 && direction == 'down') {
+                            $.fn.fullpage.moveTo(3);
+                        }
+                        else if (index == 3 && direction == 'up') {
+                            $.fn.fullpage.moveTo(1);
+                        }
+                    }
+                });
+            },
+            afterLoad: function (origin, destination, direction) {
+                Reset_Count_Display();
+                if (!$("#hr_video").hasClass("invisible"))
+                    $("#hr_fingerPrint").addClass("opacity-0");
+                if (!$("#spo2_video").hasClass("invisible"))
+                    $("#spo2_fingerPrint").addClass("opacity-0");
+            },
+
+            afterResize: function () {
+                Countdown_Resize();
+            }
+        });
+
+        // hr_video event function
+        function hr_videoEnded() {
+            $("#hr_fingerPrint").removeClass("opacity-0");
+        }
+        function hr_video2Playing() {
+            hr_vedio_count_down();
+            $("#hr_fingerPrint").addClass("opacity-0");
+        }
+        function hr_vedio_count_down() {
+            $("#content-left-hr").removeClass("opacity-0");
+            $("#content-right").removeClass("opacity-0");
+
+            var number_list = [121, 119, 120, 121];
+            var hr_index = 0;
+            var count = setInterval(function () {
+                $("#content-right-hr-number").text(number_list[hr_index]);
+                hr_index++;
+
+                if (hr_index >= number_list.length) {
+                    clearInterval(count);
+                    hr_videoEnded();
+                    $("#hr_word").text("Measure Again");
+                }
+            }, 1500);
+        }
+        // spo2_video event function
+        function spo2_videoEnded() {
+            $("#spo2_fingerPrint").removeClass("opacity-0");
+        }
+        function spo2_video2Playing() {
+            spo2_video_count_down();
+            $("#spo2_fingerPrint").addClass("opacity-0");
+        }
+
+        function spo2_video_count_down() {
+            $("#content-left-percent").removeClass("opacity-0");
+            $("#content-right-spo2").removeClass("opacity-0");
+
+            var number_list = [98, 97, 99];
+            var hr_index = 0;
+            var count = setInterval(function () {
+                $("#content-left-percent").text(number_list[hr_index] + "%");
+                hr_index++;
+
+                if (hr_index >= number_list.length) {
+                    clearInterval(count);
+                    spo2_videoEnded();
+                    $("#spo2_word").text("Measure Again");
+                }
+            }, 1200);
+        }
+        // motion event function
+        $('#motion-sensor-video').on('play', function (e) {
+            motion_vedio_count_down();
+        });
+        function motion_vedio_count_down() {
+
+            var number_list = [312, 313];
+            var hr_index = 0;
+            var count = setInterval(function () {
+                $("#content-left-m-hr-number").text(number_list[hr_index]);
+                hr_index++;
+
+                if (hr_index >= number_list.length) clearInterval(count);
+            }, 2000);
+        }
+        //
+        $(".icon-fingerprint").click(function () {
+
+            Reset_Count_Display();
+
+            var element = $(this).attr("data-video");
+            var video_element = $("#" + element);
+            var video_element2 = $("#" + element + "2");
+            video_element.removeClass("visible").addClass("invisible");
+            video_element2.removeClass("invisible").addClass("visible");
+
+            video_element2.get(0).currentTime = 0;
+            video_element2.get(0).play();
+        });
+
+        function Countdown_Resize() {
+            resizePanel();
+
+            var window_width = $(window).width();
+            var window_height = $(window).height();
+
+            //$("#motion_number").css("left", $("#motion-sensor-video").width() / 8);
+            // hr
+            var hr_emit_dist = $("#hr_video").height()/9*2.272;
+            $("#content-left-hr").css("right", hr_emit_dist);
+            $("#content-right").css("left", hr_emit_dist);
+            // spo2
+            var spo2_emit_dist_L = $("#spo2_video").height()/9*2.272;
+            var spo2_emit_dist_R = $("#spo2_video").height()/9*1.949;
+            $("#content-right-spo2").css("right", spo2_emit_dist_R);
+            $("#content-left-percent").css("left", spo2_emit_dist_L);
+            // fingerprint
+            $(".icon-fingerprint").css("height",$("#hr_video").height()*0.2166);
+            $(".icon-fingerprint").css("width",$("#hr_video").height()*0.2166);
+            // fingerprint line
+            $("#hr_bar.line").css("height", $("#hr_video").height()*0.181);
+            $("#hr_fingerPrint").css("top", (($(".icon-fingerprint").height() + $("#hr_bar.line").height() + 24)/2)-$(".icon-fingerprint").height()/2.5);
+            $("#spo2_bar.line").css("height",  $("#spo2_video").height()*0.181);
+            $("#spo2_fingerPrint").css("top",(($(".icon-fingerprint").height() + $("#spo2_bar.line").height() + 24)/2)-$(".icon-fingerprint").height()/2.5);                   
+        }
+
+        function resizePanel() {
+            var hr_panel_height = $("section[data-anchor='section_2'] .panel").height();
+            var spo2_panel_height = $("section[data-anchor='section_3'] .panel").height();
+            var motion_panel_height = $("section[data-anchor='section_4'] .panel").height();
+            var window_height = $(window).height();
+            var hr_video_height = window_height - hr_panel_height;
+            var spo2_video_height = window_height - spo2_panel_height;
+            var motion_video_height = window_height - motion_panel_height;
+            $("#hr_video").height(hr_video_height);
+            $("#hr_video2").height(hr_video_height);
+            $("#spo2_video").height(spo2_video_height);
+            $("#spo2_video2").height(spo2_video_height);
+            $("#motion-sensor-video").height(spo2_video_height);
+            $("#hr_panel").width($("#hr_video").width());
+
+            $("#hr_panel").height($("#hr_video").height());
+            $("#spo2_panel").width($("#hr_video").width());
+            $("#spo2_panel").height($("#hr_video").height());
+            $("#motion_panel").width($("#motion-sensor-video").width());
+            $("#motion_panel").height($("#motion-sensor-video").height());       
+
+            $("section[only-video='true']").each(function(){
+                $(this).find("video").height(window_height - $(this).find(".panel").height());
+            })
+
+            var header_margin_right = $("header .container").css("margin-right");
+            $(".orign-footer").css("margin-right",header_margin_right);
+            // console.log("hr_panel_height:"+hr_panel_height);
+            // console.log("window_height:"+window_height);
+            // console.log("video_height:"+video_height);
+        }
+
+        function Reset_Count_Display() {
+            $("#content-left-hr").addClass("opacity-0");
+            $("#content-right").addClass("opacity-0");
+            $("#content-right-hr-number").text("121");
+
+            $("#content-left-percent").addClass("opacity-0");
+            $("#content-right-spo2").addClass("opacity-0");
+            $("#content-left-percent").text("98%");
+
+            $("#content-left-m-hr-number").text("312");
+        }
+
+        // function Video_Resize() {
+        //     $(".video-fulid").each(function() {
+        //         if ($(this).next(".panel").length > 0) {
+        //             $(this).css("padding-bottom", $(this).next(".panel").outerHeight());
+        //         }
+        //     });
+
+        //     if ($(window).width() < 520) {
+        //         var pd = $("#motion-sensor-video").css("padding-bottom").replace(/px/g, '');
+        //         $("#motion-sensor-video").css("padding-bottom", pd + 70);
+        //     }
+        // }
+
+        // function Fingerprint_Resize() {
+
+        //     $(".fingerprint-click").each(function() {
+
+        //         var window_heigh = $(window).height();
+        //         var video_height = $(this).parent().children(".video-fulid").height();
+        //         var panel_height = $(this).parent().children(".panel").height();
+
+        //         $(this).children(".line").css("height", (window_heigh - panel_height) / 2 - 120);
+        //         $(this).css("top", (video_height / 2) - 60);
+        //     });
+        // }
+    </script>
+</body>
+
+</html>

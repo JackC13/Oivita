@@ -1,0 +1,8 @@
+fb_logo.svg
+file_list.txt
+Get_File_List.bat
+logl.svg
+mail.svg
+menu.svg
+pmenu.svg
+twitter_logo.svg

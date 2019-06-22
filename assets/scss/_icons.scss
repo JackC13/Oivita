@@ -1,0 +1,125 @@
+/* [Start] 專案Icon 定義 */
+.icon {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    font-size: 25px;
+    width:15px;
+    height:15px;
+
+     /* 大小設定 (0.5為一個級距) */
+    &.icon-sz-05 {
+        width: 0.5em;
+        height: 0.5em;
+        line-height: 0.5em;
+    }
+
+    &.icon-sz-1 {
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+    }
+
+    &.icon-sz-15 {
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+
+    &.icon-sz-2 {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+    }
+
+    &.icon-sz-25 {
+        width:2.5em;
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+
+    &.icon-sz-3 {
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+    }
+
+    &.icon-sz-35 {
+        width: 3.5em;
+        height: 3.5em;
+        line-height: 3.5em;
+    }
+
+    &.icon-sz-4 {
+        width: 4em;
+        height: 4em;
+        line-height: 4em;
+    }
+
+    &.icon-sz-45 {
+        width: 4.5em;
+        height: 4.5em;
+        line-height: 4.5em;
+    }
+
+    &.icon-sz-6 {
+        width: 6em;
+        height: 6em;
+        line-height: 6em;
+      }
+
+    /* 對齊位置 */
+    &.icon-position-center {
+        background-position: center !important;
+    }
+
+    &.icon-position-top {
+        background-position: top !important;
+    }
+
+    &.icon-position-bottom {
+        background-position: bottom !important;
+    }
+
+    &.icon-position-left {
+        background-position: left !important;
+    }
+
+    &.icon-position-left {
+        background-position: left !important;
+    }
+
+
+
+
+	/* Icon樣式 */
+   	&.icon-fb-logo {
+        background-image: url("../svg/fb_logo.svg");
+    }
+   	&.icon-logo {
+        background-image: url("../svg/logo.svg");
+    }
+   	&.icon-mail {
+        background-image: url("../svg/mail.svg");
+    }
+   	&.icon-menu {
+        background-image: url("../svg/menu.svg");
+    }
+   	&.icon-pmenu {
+        background-image: url("../svg/pmenu.svg");
+    }
+   	&.icon-twitter-logo {
+        background-image: url("../svg/twitter_logo.svg");
+    }
+    &.icon-fingerprint {
+         background-image: url("../svg/fingerprint.svg");
+     }
+
+
+
+
+
+}

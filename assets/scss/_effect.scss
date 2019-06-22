@@ -1,0 +1,56 @@
+
+
+
+.line{
+
+    border:none;
+    border-radius:25px;
+    width:5px;
+    height:50px;
+
+    &.line-blue{
+        background-color: #01BEDB;
+    }
+
+}
+
+
+
+
+/* 超連結特效 */
+.link {
+    display: inline-block;
+    transition: all 0.3s ease-out;
+    &:hover {
+        a {
+            &:before {
+                width: 50%;
+            }
+            &:after {
+                width: 50%;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        position: relative;
+        transition: all 0.5s ease-out;
+
+        &:before,
+        &:after {
+            content: '';
+            transition: all 0.3s ease-out;
+            border-bottom: solid 1px $color_dark_hover;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+}
